@@ -1,20 +1,67 @@
+# 注意：本仓库不支持单拉
 # 佛系修复，用爱发电
 # 由X1a0He修复，引用注明来源，使用前看下面
 
-要是不看脚本注释就用我仓库的脚本，还来问我怎么用的，自己删脚本吧
+问的时候请带上日志截图+你遇到的问题
 
-针对与 京东试用脚本 如果再有傻逼来一直问，我直接扬库跑路
+不看脚本就直接跑，且来问的，请删脚本
 
-我写得很清楚了
+针对 京东试用脚本 请先看完脚本注释再来问，我写得很清楚了
 
-[修复日志](https://github.com/X1a0He/jd_scripts_fixed#fixlog)
+[修复日志 和 更新日志](https://github.com/X1a0He/jd_scripts_fixed#fixlog--updatelog)
 
 [ToDo](https://github.com/X1a0He/jd_scripts_fixed#todo)
 
-[更新日志](https://github.com/X1a0He/jd_scripts_fixed#updatelog)
-
 ## Contact：[X1a0He](https://t.me/X1a0He) (需要科学上网)
-# Fixlog
+# Fixlog & Updatelog
+- 2022-02-03 15:55 Update [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js)
+```
+当统一试用组启用时，无论是否已满，第二个账号开始均不会进行试用组的再次添加
+```
+- 2022-01-30 14:15 Update [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js)
+```
+新增环境变量 XH_TRY_EXCEPT 以控制跳过某个指定账号
+新增环境变量 XH_TRY_ENV 以控制是否输出查看环境变量
+```
+- 2022-01-30 14:10 Update [jd_unsubscribe_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_unsubscribe_xh.js)
+```
+新增环境变量 XH_UNSUB_EXCEPT 以控制跳过某个指定账号
+修改了部分地方写错注释的问题
+```
+- 2022-01-30 03:10 Fix [jd_cleancart.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_cleancart.js)
+```
+修复了删除失败不会停止的问题
+```
+- 2022-01-29 22:50 Update [jd_cleancart.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_cleancart.js)
+```
+新增环境变量 XH_CLEAN_EXCEPT 以控制跳过某个指定账号
+修改环境变量 JD_CART_REMOVESIZE -> XH_CLEAN_REMOVESIZE
+修改环境变量 JD_CART_KEYWORDS -> XH_CLEAN_KEYWORDS
+移除环境变量 JD_CART_REMOVEALL
+整合了需要读取环境变量的内部变量，并显示出已经设置的环境变量
+```
+- 2022-01-29 16:45 Fix [jd_unsubscribe_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_unsubscribe_xh.js)
+```
+再次修复了获取数据失败的问题
+再次修复了取消关注或取消收藏失败的问题
+```
+- 2022-01-25 16:05 Fix [jd_cleancart.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_cleancart.js)
+```
+修复了获取购物车失败的问题
+修复了删除购物车数据失败的问题
+```
+- 2022-01-25 16:05 Fix [jd_unsubscribe_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_unsubscribe_xh.js)
+```
+修复了获取数据失败的问题
+修复了取消关注或取消收藏失败的问题
+```
+- 2022-01-25 15:42 Fix [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js)
+```
+新增环境变量 JD_TRY_TOTALPAGES 用于指定每页遍历的最大页数
+新增环境变量 JD_TRY_UNIFIED 用于指定是否采用统一试用组，详情请看脚本 args_xh 下的注释
+修复了获取tabList失败的问题
+修复了无法获取试用申请成功的问题
+```
 - 2021-12-26 15:00 Fix [jd_unsubscribe_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_unsubscribe_xh.js)
 ```
 修复了获取数据失败的问题
@@ -147,30 +194,6 @@
 我看看怎样在原有数据的基础上简化一下，有好idea的可以联系我
 ```
 - [x] Fixed:取关店铺遇到关键字会进入死循环 [#1](https://github.com/X1a0He/jd_scripts_fixed/issues/1) 
-# UpdateLog
- - 2021-09-07 23:43 Update [jd_bean_change_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_bean_change_xh.js)
- ```
- 简化了京东日资产通知
- 增加可通过环境变量来控制每次发送的账号数量
- JD_BEAN_CHANGE_SENDNUM 默认为2
- 效果如下
- ```
-![](https://camo.githubusercontent.com/9ea74bcdcd3560f70e77a50210d52ccfdea6f8ac4019ba419b863523a119549c/68747470733a2f2f7777772e7831613068652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f30392f576563686174494d4736382e6a706567)
- - 2021-09-07 12:02 Update [jd_islogin_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_islogin_xh.js)
- ```
-检测Cookie是否有效
-[京东账号1 xxxxxxxxxx] 正在检测...
-[京东账号1 xxxxxxxxxx] ✅Cookie有效
-
-[京东账号2 xxxxxxxxxx] 正在检测...
-[京东账号2 xxxxxxxxxx] ❌Cookie失效了...
- ```
- - 2021-09-06 22:09 Update [jdCookie_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jdCookie_xh.js)
- ```
- 原文件的输出太长，我自己改成了下面的形式
- 不喜勿下
- [2021-09-06 22:07:40] 读取到3个京东账号Cookie
- ```
 # 使用前必读
 库如其名，这里是一些由我亲自修复的京东类脚本，你完全可以在Nodejs环境下正常运行，但不排除会有逻辑性错误
 
