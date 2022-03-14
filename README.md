@@ -1,19 +1,10 @@
-# 注意：本仓库不支持单拉
-# 佛系修复，用爱发电
-# 由X1a0He修复，引用注明来源，使用前看下面
-
-问的时候请带上日志截图+你遇到的问题
-
-不看脚本就直接跑，且来问的，请删脚本
-
-针对 京东试用脚本 请先看完脚本注释再来问，我写得很清楚了
-
-[修复日志 和 更新日志](https://github.com/X1a0He/jd_scripts_fixed#fixlog--updatelog)
-
-[ToDo](https://github.com/X1a0He/jd_scripts_fixed#todo)
-
-## Contact：[X1a0He](https://t.me/X1a0He) (需要科学上网)
+# 免责声明：仓库内所有文件仅供学习使用，请在24小时后删除
 # Fixlog & Updatelog
+- 2022-02-11 02:10 Update [jd_unsubscribe_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_unsubscribe_xh.js)
+```
+增加401 Authorization Required的检测，当遇到此问题时，将不再进行json数据解析
+修复提示json解析错误的问题，若多次出现，请设置环境变量JD_USER_AGENT来控制脚本User-Agent的提交
+```
 - 2022-02-03 15:55 Update [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js)
 ```
 当统一试用组启用时，无论是否已满，第二个账号开始均不会进行试用组的再次添加
@@ -172,44 +163,3 @@
  增加是否输出到日志
  修复当maxLength过大的时候，会出现自动停止的问题
 ```
-# ToDo
-- [x] About [jd_bean_change.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_bean_change_xh.js)
-```
-尝试修复 京豆昨日收支统计错误的问题(好像又没有问题)
-```
-- [x] About [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js)
-```
-内置成人类用品，老人，幼儿，饲料的关键词，无论有无设置环境变量，内置关键词永远存在
-增加指定账号数量发送通知
-修复一旦遇到有上限账号或风控账号就不发通知的问题
-```
-- [x] About [jd_try_xh.js](https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js) [#2](https://github.com/X1a0He/jd_scripts_fixed/issues/2) [#3](https://github.com/X1a0He/jd_scripts_fixed/issues/3)
-```
-支持黑名单过滤关键词时 输出对应关键词
-对应账号遇到403风控后将不会再执行
-```
-- [x] 简化jd_bean_change.js
-```
-初步构思，每两个账号推送一遍，防止长度过长无法推送，例如Bark就是3个账号推送不了
-我看看怎样在原有数据的基础上简化一下，有好idea的可以联系我
-```
-- [x] Fixed:取关店铺遇到关键字会进入死循环 [#1](https://github.com/X1a0He/jd_scripts_fixed/issues/1) 
-# 使用前必读
-库如其名，这里是一些由我亲自修复的京东类脚本，你完全可以在Nodejs环境下正常运行，但不排除会有逻辑性错误
-
-不要带着老脚本的思想来用我修复后的脚本
-
-因为这里的脚本基本上和老脚本不一样，我能重写的都会重写
-
-所以以前的方式是怎样，流程是怎样我并不清楚
-
-如果你想尽可能还原以前的体验，我非常欢迎你来跟我交流
-
-# 注意事项
-因本人水平有限，难免会出现一些逻辑性错误，如果你发现了我修复后还出现逻辑错误
-
-又或者你有更好的处理思路或有更好的idea
-
-可以跟我交流
-
-但使用前请确保你认真看了脚本内的注释，我在每个脚本难以理解的地方都会加上了注释
